@@ -1,4 +1,4 @@
-const products = ["orange"];
+const products = [];
 let id = 0;
 
 function resetProducts(){};
@@ -14,8 +14,9 @@ function addProduct(name, price){
         throw new Error ("Product already on the list")
     }
     else {
-        products.push({name : price});
         id = ++id;
+        products.push({productId: id, productName: name, productPrice: price});
+    
     }
 };
 
@@ -30,4 +31,5 @@ function getProduct(id){};
 function updateProduct(id, name, price){};
 
 addProduct("lemon", 20);
+addProduct("orange", 20);
 console.log(products)
